@@ -18,8 +18,9 @@ import (
 var (
 	// CustomPath sets a custom directory to store the inventory.
 	CustomPath string
-	// ReturnLocation sets the return location of the inventory (default: Lab).
-	ReturnLocation = "Lab"
+	// ReturnLocation sets the return location of the inventory (default:
+	// returned).
+	ReturnLocation = "returned"
 )
 
 // Items returns the list of items in the inventory.
