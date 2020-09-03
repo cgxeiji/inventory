@@ -1,0 +1,74 @@
+{{ define "add" }}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {{ template "baseHead" }}
+        <title>Add Item</title>
+    </head>
+
+    <body class="mdc-typography">
+        <main>
+
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
+    <form class="mdc-card card"
+        enctype="multipart/form-data" action="/add" method="post">
+
+          <div class="card-content">
+            <h1 class="mdc-typography mdc-typography--headline3
+            card-title">New Item</h1><br>
+            <div class="mdc-typography mdc-typography--body1">
+
+<label class="mdc-text-field mdc-text-field--outlined">
+  <input type="text" required class="mdc-text-field__input"
+  aria-labelledby="name" name="name">
+  <span class="mdc-notched-outline">
+    <span class="mdc-notched-outline__leading"></span>
+    <span class="mdc-notched-outline__notch">
+      <span class="mdc-floating-label" id="name">Name of the Item</span>
+    </span>
+    <span class="mdc-notched-outline__trailing"></span>
+  </span>
+</label>
+
+            <p>Please, take a picture of the item.</p>
+
+                <div style="text-align:center;">
+                    <img id="preview" alt="preview image"
+                            style="width:200px; height:200px; object-fit: cover;
+                            margin:auto; vertical-align:middle;"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9Ta4tUHCwo0iFDdbIgKuKoVShChVArtOpgcumH0KQhSXFxFFwLDn4sVh1cnHV1cBUEwQ8QJ0cnRRcp8X9JoUWsB8f9eHfvcfcOEOplplldY4Cm22Y6mRCzuRUx+IoQoujGAAIys4xZSUqh4/i6h4+vd3Ge1fncn6NXzVsM8InEM8wwbeJ14qlN2+C8TxxhJVklPiceNemCxI9cVzx+41x0WeCZETOTniOOEIvFNlbamJVMjXiSOKZqOuULWY9VzluctXKVNe/JXxjO68tLXKcZRRILWIQEEQqq2EAZNuK06qRYSNN+ooN/yPVL5FLItQFGjnlUoEF2/eB/8LtbqzAx7iWFE0DgxXE+hoHgLtCoOc73seM0TgD/M3Clt/yVOjD9SXqtpcWOgL5t4OK6pSl7wOUOMPhkyKbsSn6aQqEAvJ/RN+WA/lugZ9XrrbmP0wcgQ12lboCDQ2CkSNlrHd4dau/t3zPN/n4AGXtyg+Nb6FEAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfkCBwGGAWdQkC2AAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAAxJREFUCNdjaGhoAAADBAGBmvDNTwAAAABJRU5ErkJggg=="/>
+               </div><br>
+
+                <input type="file" accept="image/*" capture required id="image" name="image"
+                           onchange="document.getElementById('preview').src =
+                           window.URL.createObjectURL(this.files[0])">
+
+            </div>
+          </div>
+
+        <div class="mdc-card__actions">
+            <button class="mdc-button mdc-button--raised mdc-card__action
+                mdc-card__action--button mdc-theme -primary" type="submit">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Add item!</span>
+            </button>
+        </div>
+
+    </form>
+
+    </div>
+  </div>
+</div>
+
+        </main>
+
+
+        <script src="styles/bundle.js" async></script>
+    </body>
+</html>
+{{ end }}
