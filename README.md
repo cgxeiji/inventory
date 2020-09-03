@@ -61,7 +61,9 @@ still be accessed by anyone.
 
 ## Installation
 
-You can download the release binaries or compile it from source by running:
+You can download the [release
+binaries](https://github.com/cgxeiji/inventory/releases) or compile it from
+source by running:
 ```
 $ go get -v github.com/cgxeiji/inventory/inventory
 ```
