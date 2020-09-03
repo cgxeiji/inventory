@@ -23,6 +23,8 @@ $ inventory -p 5005 -d /path/to/inventory/dir
 press `+ Add item` to add a new item to the inventory using the web interface
 or manually create an entry at `$HOME/.inventory`.
 
+#### Items
+
 Each item is added to its own directory with a unique id name and consist of a
 `info.yaml` metadata file, `picture.jpg` with a picture of the item, and
 `location.jpg` with a photo of the return location.
@@ -31,6 +33,8 @@ Once the item is added, it will appear inside the table at the root url.
 Clicking on the thumbnail of the item will open a new page with a QR code
 linking that specific item. You can print this QR code and physically attach it
 to the item.
+
+#### Check in/out with QR codes
 
 Scanning the QR code will open an `update item` interface where the user is
 prompted to write their name. Clicking on `Use item!` will change the state of
@@ -59,5 +63,5 @@ still be accessed by anyone.
 
 You can download the release binaries or compile it from source by running:
 ```
-$ go get github.com/cgxeiji/inventory/webapp
+$ go get -v github.com/cgxeiji/inventory/inventory
 ```
