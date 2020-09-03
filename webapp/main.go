@@ -100,5 +100,5 @@ func checkAuth(path string, hf http.HandlerFunc) http.HandlerFunc {
 		return auth.JustCheck(a, hf)
 	}
 
-	return rootH
+	return hf
 }
